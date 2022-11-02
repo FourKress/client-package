@@ -1,0 +1,32 @@
+{
+  "name": "client-package",
+  "version": "0.0.1",
+  "description": "客户端架构包 npm私有库管理",
+  "repository": "",
+  "author": "wu.dong",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "precommit-msg": "echo 'Pre-commit checks.........' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-msg"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "semi": true,
+    "stylelintIntegration": true,
+    "eslintIntegration": true,
+    "trailingComma": "all",
+    "htmlWhitespaceSensitivity": "ignore"
+  },
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

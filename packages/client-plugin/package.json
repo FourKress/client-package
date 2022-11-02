@@ -1,0 +1,22 @@
+{
+  "name": "client-plugin",
+  "version": "0.0.0",
+  "description": "客户端插件",
+  "keywords": [
+    "plugin"
+  ],
+  "author": "吴东 <511970747@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/client-plugin.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/client-plugin.test.js"
+  }
+}

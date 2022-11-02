@@ -1,0 +1,22 @@
+{
+  "name": "client-ipcmain",
+  "version": "0.0.0",
+  "description": "客户端主进程",
+  "keywords": [
+    "ipcMain"
+  ],
+  "author": "吴东 <511970747@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/client-ipcMain.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/client-ipcMain.test.js"
+  }
+}
