@@ -1,6 +1,4 @@
 /node_modules
-/npm-debug.log
-/app/logs
 node_modules/**
 .*/**
 .idea/**
@@ -8,4 +6,3 @@ dist
 *.bak.*
 *error.log
 pnpm-lock.yaml
-package-lock.json

@@ -1,9 +1,9 @@
 {
   "name": "client-package",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "客户端架构包 npm私有库管理",
   "repository": "",
-  "author": "wu.dong",
+  "author": "吴东 <511970747@qq.com>",
   "license": "MIT",
   "private": true,
   "scripts": {

@@ -1,18 +1,25 @@
 {
   "parserOptions": {
-    "parser": "@babel/eslint-parser",
+    "parser": "babel-eslint",
     "ecmaVersion": 2017,
     "ecmaFeatures": {
-      "implied": true
+      "implied": true,
+      "jsx": true
     },
     "sourceType": "module"
   },
   "env": {
     "es6": true,
     "node": true,
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
-  "extends": ["airbnb-base", "plugin:vue/essential", "prettier"],
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/essential",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
   "globals": {
     "CONFIG": "readonly",
     "RSK_CONFIG": "readonly",
@@ -20,13 +27,17 @@
     "vue": "readonly",
     "vue-router": "readonly"
   },
-  "plugins": ["@babel", "prettier"],
+  "plugins": ["@babel", "prettier", "jest"],
   "settings": {
     "prettier/prettier": "error",
     "import/resolver": {
       "alias": {
-        "map": [["@common", "./"]],
-        "extensions": [".js", ".json", ".vue"]
+        "map": [
+          ["@rskd-utils", "./packages/rskd-utils"],
+          ["@rskd-pro", "./packages/rskd-pro"],
+          ["@rskd", "./packages/rskd-ui"]
+        ],
+        "extensions": [".ts", ".js", ".json", ".vue"]
       }
     }
   },
@@ -51,9 +62,10 @@
     "no-unused-vars": ["warn", { "argsIgnorePattern": "h" }],
     "prefer-promise-reject-errors": "warn",
     "import/extensions": [
-      1,
+      "error",
       "always",
       {
+        "ts": "never",
         "js": "never",
         "vue": "never"
       }
@@ -64,11 +76,15 @@
         "devDependencies": ["/build/*"]
       }
     ],
-    "import/no-unresolved": 1,
+    "import/named": "off",
     "import/no-cycle": "off",
     "import/order": "warn",
     "import/prefer-default-export": "off",
-    "vue/no-side-effects-in-computed-properties": "warn",
-    "vue/no-mutating-props": "warn"
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "vue/no-side-effects-in-computed-properties": "warn"
   }
 }
