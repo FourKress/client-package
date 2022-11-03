@@ -1,43 +1,32 @@
 {
   "parserOptions": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "ecmaVersion": 2017,
     "ecmaFeatures": {
-      "implied": true,
-      "jsx": true
+      "implied": true
     },
     "sourceType": "module"
   },
   "env": {
     "es6": true,
     "node": true,
-    "browser": true,
-    "jest/globals": true
+    "browser": true
   },
-  "extends": [
-    "airbnb-base",
-    "plugin:vue/essential",
-    "plugin:jest/recommended",
-    "prettier"
-  ],
+  "extends": ["airbnb-base", "plugin:vue/essential", "prettier"],
   "globals": {
-    "CONFIG": "readonly",
-    "RSK_CONFIG": "readonly",
     "ELEMENT": "readonly",
     "vue": "readonly",
     "vue-router": "readonly"
   },
-  "plugins": ["@babel", "prettier", "jest"],
+  "plugins": ["@babel", "prettier"],
   "settings": {
     "prettier/prettier": "error",
     "import/resolver": {
       "alias": {
         "map": [
-          ["@rskd-utils", "./packages/rskd-utils"],
-          ["@rskd-pro", "./packages/rskd-pro"],
-          ["@rskd", "./packages/rskd-ui"]
+          ["@", "./src"]
         ],
-        "extensions": [".ts", ".js", ".json", ".vue"]
+        "extensions": [".js", ".json", ".vue"]
       }
     }
   },
@@ -65,26 +54,15 @@
       "error",
       "always",
       {
-        "ts": "never",
         "js": "never",
         "vue": "never"
       }
     ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": ["/build/*"]
-      }
-    ],
-    "import/named": "off",
     "import/no-cycle": "off",
     "import/order": "warn",
     "import/prefer-default-export": "off",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
-    "vue/no-side-effects-in-computed-properties": "warn"
+    "vue/no-side-effects-in-computed-properties": "warn",
+    "vue/no-mutating-props": "warn",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }

@@ -1,19 +1,62 @@
 {
   "name": "client-package",
   "version": "0.0.0",
-  "description": "客户端架构包 npm私有库管理",
-  "repository": "",
-  "author": "吴东 <511970747@qq.com>",
-  "license": "MIT",
   "private": true,
+  "description": "客户端架构包 npm私有库管理",
+  "license": "MIT",
+  "repository": "",
+  "author": {
+    "name": "吴东",
+    "email": "511970747@qq.com"
+  },
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "precommit-msg": "echo 'Pre-commit checks.........' && exit 0"
   },
   "pre-commit": [
     "precommit-msg"
   ],
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "lerna": "^6.0.1",
+    "vue-template-compiler": "^2.6.14",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "@babel/eslint-plugin": "^7.19.1",
+    "babel-eslint": "^10.1.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
   "prettier": {
     "singleQuote": true,
     "endOfLine": "auto",
@@ -23,9 +66,11 @@
     "trailingComma": "all",
     "htmlWhitespaceSensitivity": "ignore"
   },
-  "devDependencies": {
-    "lerna": "^6.0.1"
-  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "workspaces": [
     "packages/*"
   ]
