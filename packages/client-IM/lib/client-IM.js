@@ -1,7 +1,3 @@
-'use strict';
+import { MainIM } from '../src/main';
 
-module.exports = clientIm;
-
-function clientIm() {
-    return "Hello from clientIm";
-}
+export { MainIM };

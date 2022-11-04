@@ -1,7 +1,3 @@
-'use strict';
+import ClientLayout from '../src/main';
 
-module.exports = clientLayout;
-
-function clientLayout() {
-    return "Hello from clientLayout";
-}
+export { ClientLayout };

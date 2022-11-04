@@ -1,0 +1,30 @@
+{
+  "name": "client-ipc-event",
+  "version": "0.0.9",
+  "description": "客户端事件集",
+  "keywords": [
+    "event"
+  ],
+  "repository": "git@github.com:FourKress/client-event.git",
+  "author": "wudong <511970747@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/client-event.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/client-event.test.js"
+  },
+  "dependencies": {
+    "electron": "^21.2.2",
+    "electron-devtools-installer": "^3.2.0",
+    "electron-screenshots": "^0.5.13",
+    "vue-cli-plugin-electron-builder": "^2.1.1"
+  }
+}

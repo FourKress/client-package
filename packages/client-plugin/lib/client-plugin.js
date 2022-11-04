@@ -1,7 +1,3 @@
-'use strict';
+import { MainPlugIn } from '../src/main';
 
-module.exports = clientPlugin;
-
-function clientPlugin() {
-    return "Hello from clientPlugin";
-}
+export { MainPlugIn };

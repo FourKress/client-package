@@ -1,7 +1,3 @@
-'use strict';
+import { ClientContainer } from '../src/main';
 
-module.exports = clientContainer;
-
-function clientContainer() {
-  return 'Hello from clientContainer';
-}
+export { ClientContainer };

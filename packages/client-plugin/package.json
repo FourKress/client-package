@@ -1,11 +1,12 @@
 {
   "name": "client-plugin",
-  "version": "0.0.0",
+  "version": "0.0.9",
   "description": "客户端插件",
   "keywords": [
     "plugin"
   ],
-  "author": "吴东 <511970747@qq.com>",
+  "repository": "git@github.com:FourKress/client-plugin.git",
+  "author": "wudong <511970747@qq.com>",
   "homepage": "",
   "license": "MIT",
   "main": "lib/client-plugin.js",
@@ -14,7 +15,8 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "scripts": {
     "test": "node ./__tests__/client-plugin.test.js"
@@ -22,6 +24,9 @@
   "dependencies": {
     "@babel/eslint-plugin": "^7.19.1",
     "babel-eslint": "^10.1.0",
+    "electron": "^21.2.2",
+    "electron-devtools-installer": "^3.2.0",
+    "electron-screenshots": "^0.5.13",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -29,7 +34,11 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-prettier": "^2.0.0"
+    "stylelint-prettier": "^2.0.0",
+    "vue": "^3.2.41",
+    "vue-cli-plugin-electron-builder": "^2.1.1"
   }
 }

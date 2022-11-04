@@ -1,7 +1,3 @@
-'use strict';
+import { MainSideBar } from '../src/main';
 
-module.exports = clientSidebar;
-
-function clientSidebar() {
-    return "Hello from clientSidebar";
-}
+export { MainSideBar };
